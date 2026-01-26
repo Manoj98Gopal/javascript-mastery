@@ -1,2 +1,2 @@
-- [01. Theory](theory.md)
-- [02. Interview-qa](interview-qa.md)
+- [01. Theory](./theory.md)
+- [02. Interview-qa](./interview-qa.md)

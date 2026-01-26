@@ -5,7 +5,7 @@ Complete JavaScript notes from basics to advanced for interview preparation.
 ## 📚 Table of Contents
 
 ### 🟢 Phase 1: JavaScript Basics
-- [01. What is JavaScript?](./01-basics/01-what-is-js/)
+- [01. What is JavaScript?](./01-basics/01-what-is-js/index.md)
 - [02. How JS Runs (Browser & Node.js)](./01-basics/02-how-js-runs/)
 - [03. Variables (var, let, const)](./01-basics/03-variables/)
 - [04. Data Types (Primitive vs Non-Primitive)](./01-basics/04-data-types/)
