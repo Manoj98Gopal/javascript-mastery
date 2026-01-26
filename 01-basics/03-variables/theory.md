@@ -20,10 +20,6 @@ JavaScript has three ways to declare variables:
 
 ## 1. var (Old Way - Avoid Using)
 
-### Syntax
-```javascript
-var variableName = value;
-```
 
 ### Characteristics
 
@@ -60,13 +56,6 @@ var name = "Manoj";
 console.log(name);  // "Manoj"
 ```
 
-**Behind the scenes (how JavaScript sees it):**
-```javascript
-var name;           // Declaration hoisted to top
-console.log(name);  // undefined
-name = "Manoj";     // Assignment stays in place
-console.log(name);  // "Manoj"
-```
 
 #### ⚠️ NOT Block Scoped
 ```javascript
@@ -105,11 +94,6 @@ for (var i = 0; i < 3; i++) {
 ---
 
 ## 2. let (Modern Way - Use for Changing Values)
-
-### Syntax
-```javascript
-let variableName = value;
-```
 
 ### Characteristics
 
@@ -161,28 +145,9 @@ for (let i = 0; i < 3; i++) {
 // console.log(i);  // ❌ Error: i is not defined
 ```
 
-### When to Use let
 
-✅ Loop counters
-✅ Variables that will change
-✅ Temporary variables
-✅ Variables with limited scope
-
-**Examples:**
-```javascript
-let counter = 0;
-let isLoggedIn = false;
-let currentPage = 1;
-```
-
----
 
 ## 3. const (Modern Way - Use for Fixed Values)
-
-### Syntax
-```javascript
-const variableName = value;
-```
 
 ### Characteristics
 
@@ -253,29 +218,6 @@ console.log(numbers);  // [10, 2, 3, 4]
 // numbers = [];  // ❌ Error: Assignment to constant variable
 ```
 
-**Why?**
-- `const` prevents **reassignment** of the variable
-- `const` does NOT prevent **mutation** of objects/arrays
-- The reference (memory address) cannot change
-- The content at that address CAN change
-
-### When to Use const
-
-✅ Fixed values (PI, MAX_USERS, API_URL)
-✅ Configuration objects
-✅ Function declarations
-✅ Arrays/Objects that won't be reassigned
-✅ **DEFAULT CHOICE** (use const unless you need to reassign)
-
-**Examples:**
-```javascript
-const MAX_LOGIN_ATTEMPTS = 3;
-const API_URL = "https://api.example.com";
-const config = { timeout: 5000 };
-const colors = ["red", "green", "blue"];
-```
-
----
 
 ## Comparison Table
 
@@ -354,50 +296,6 @@ console.log(name);     // "Manoj"
 
 ---
 
-## Best Practices
-
-### ✅ DO
-
-1. **Use `const` by default**
-```javascript
-const user = { name: "Manoj" };
-const API_KEY = "abc123";
-```
-
-2. **Use `let` when you need to reassign**
-```javascript
-let counter = 0;
-counter++;
-```
-
-3. **Avoid `var` completely**
-```javascript
-// ❌ Don't do this
-var name = "Manoj";
-
-// ✅ Do this instead
-const name = "Manoj";
-```
-
-4. **Use descriptive names**
-```javascript
-// ❌ Bad
-const x = 100;
-
-// ✅ Good
-const MAX_USERS = 100;
-```
-
-5. **One declaration per line**
-```javascript
-// ❌ Avoid
-let a = 1, b = 2, c = 3;
-
-// ✅ Better
-let a = 1;
-let b = 2;
-let c = 3;
-```
 
 ### ❌ DON'T
 
