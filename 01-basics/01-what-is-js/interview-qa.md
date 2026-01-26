@@ -21,7 +21,7 @@ JavaScript runs in two environments:
    - Handles backend logic, APIs, databases
 
 ---
-
+s
 ## Q3: Is JavaScript single-threaded or multi-threaded?
 
 **Answer:**  
@@ -196,15 +196,3 @@ The Event Loop is a mechanism that allows JavaScript to handle asynchronous oper
 And executes tasks accordingly.
 
 *(This will be covered in detail in Phase 4)*
-```
-
----
-
-## 📁 All Files Ready!
-
-Copy these 3 files into your folder:
-```
-01-what-is-js/
-├── theory.md
-├── examples.js
-└── interview-qa.md
