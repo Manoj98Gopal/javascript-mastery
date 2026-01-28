@@ -517,45 +517,7 @@ console.log(typeof obj === "object" && obj !== null);  // true
 
 ---
 
-## 6. Type Conversion
-
-### Explicit Conversion
-```javascript
-// To Number
-Number("123");      // 123
-parseInt("123");    // 123
-parseFloat("12.5"); // 12.5
-+"123";            // 123 (unary plus)
-
-// To String
-String(123);        // "123"
-(123).toString();   // "123"
-123 + "";          // "123"
-
-// To Boolean
-Boolean(1);         // true
-Boolean(0);         // false
-!!1;               // true (double negation)
-```
-
-### Implicit Conversion (Coercion)
-```javascript
-// String + Number = String
-"5" + 3;        // "53"
-
-// Number operators = Number
-"5" - 3;        // 2
-"5" * "2";      // 10
-"10" / "2";     // 5
-
-// Boolean in arithmetic
-true + 1;       // 2
-false + 1;      // 1
-```
-
----
-
-## 7. Shallow Copy vs Deep Copy
+## 6. Shallow Copy vs Deep Copy
 
 ### Shallow Copy
 
@@ -606,7 +568,7 @@ console.log(deepCopy.address.city);  // "Mumbai"
 
 ---
 
-## 8. Common Pitfalls
+## 7. Common Pitfalls
 
 ### Pitfall 1: typeof null
 ```javascript
@@ -647,66 +609,8 @@ let arr3 = [...arr1];  // or arr1.slice()
 
 ---
 
-## 9. Best Practices
 
-### ✅ DO
-
-1. **Use strict equality (===)**
-```javascript
-5 === 5;      // true
-5 === "5";    // false
-```
-
-2. **Check types explicitly**
-```javascript
-if (Array.isArray(value)) { }
-if (typeof value === "string") { }
-```
-
-3. **Use const for objects/arrays that won't be reassigned**
-```javascript
-const config = { timeout: 5000 };
-const users = ["Manoj", "Kumar"];
-```
-
-4. **Be aware of type coercion**
-```javascript
-"5" + 3;  // "53" (string concatenation)
-"5" - 3;  // 2 (numeric subtraction)
-```
-
-### ❌ DON'T
-
-1. **Don't rely on typeof for null**
-```javascript
-// ❌ Bad
-if (typeof x === "object") { }  // matches null too!
-
-// ✅ Good
-if (typeof x === "object" && x !== null) { }
-```
-
-2. **Don't use == (loose equality)**
-```javascript
-// ❌ Bad
-5 == "5";  // true (type coercion)
-
-// ✅ Good
-5 === "5";  // false (strict)
-```
-
-3. **Don't compare NaN directly**
-```javascript
-// ❌ Bad
-if (x === NaN) { }
-
-// ✅ Good
-if (Number.isNaN(x)) { }
-```
-
----
-
-## 10. Summary
+## 8. Summary
 
 ### Primitive Types (7)
 ✅ Number, String, Boolean, undefined, null, Symbol, BigInt  
