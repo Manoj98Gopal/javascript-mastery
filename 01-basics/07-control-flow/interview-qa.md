@@ -524,4 +524,309 @@ switch (month) {
 ✅ **Want to use fall-through**
 ```javascript
 switch (day) {
-    case "Mon
+    case "Mon":
+    case "Tue":
+    case "Wed":
+    case "Thu":
+    case "Fri":
+        return "Weekday";
+    case "Sat":
+    case "Sun":
+        return "Weekend";
+}
+```
+
+Use if/else when:
+- Testing ranges
+- Complex conditions
+- Different variables in each condition
+
+---
+
+## Q20: What's the output?
+```javascript
+let x = 0;
+
+if (x = 5) {
+    console.log("True");
+} else {
+    console.log("False");
+}
+
+console.log(x);
+```
+
+**Answer:**
+```
+True
+5
+```
+
+**Reason:**  
+- `x = 5` is **assignment**, not comparison!
+- Assignment returns the assigned value (5)
+- `5` is truthy
+- `x` is now 5
+
+**Common mistake!** Should be:
+```javascript
+if (x === 5) {  // Comparison, not assignment
+```
+
+---
+
+## Q21: Can default appear anywhere in switch?
+
+**Answer:**  
+Yes, but convention is to put it last.
+```javascript
+switch (value) {
+    default:
+        console.log("Default");
+        break;
+    case 1:
+        console.log("One");
+        break;
+    case 2:
+        console.log("Two");
+        break;
+}
+// Works, but unusual
+```
+
+**Best practice:** Always put `default` last for readability.
+
+---
+
+## Q22: What's the output?
+```javascript
+let value = null;
+
+if (value) {
+    console.log("Has value");
+} else if (!value) {
+    console.log("No value");
+} else {
+    console.log("Other");
+}
+```
+
+**Answer:** `"No value"`
+
+**Reason:**  
+- `if (value)` → `if (null)` → false (null is falsy)
+- `else if (!value)` → `!null` → `!false` → true
+- Prints "No value"
+
+---
+
+## Q23: Fix this code
+```javascript
+// Buggy code
+let score = 85;
+
+if (score >= 90)
+    console.log("Excellent");
+    console.log("Great job");
+```
+
+**Answer:**
+```javascript
+let score = 85;
+
+if (score >= 90) {
+    console.log("Excellent");
+    console.log("Great job");
+}
+```
+
+**Problem:** Without brackets, only the first line is part of the if. "Great job" always prints.
+
+---
+
+## Q24: What's better and why?
+```javascript
+// Option A
+if (user !== null && user !== undefined) {
+    console.log(user.name);
+}
+
+// Option B
+if (user != null) {
+    console.log(user.name);
+}
+
+// Option C
+if (user) {
+    console.log(user.name);
+}
+```
+
+**Answer:**  
+**Option C** is best in most cases.
+
+**Reason:**
+- Option A: Too verbose
+- Option B: Good (checks both null and undefined with `!=`)
+- Option C: Best (shortest, checks truthy which includes not null/undefined)
+
+**Exception:** If `0`, `""`, or `false` are valid user values, use Option B.
+
+---
+
+## Q25: Final Challenge
+```javascript
+let a = 1, b = 2, c = 3;
+
+if (a = b = c) {
+    console.log("True:", a, b, c);
+} else {
+    console.log("False:", a, b, c);
+}
+```
+
+**What will be the output?**
+
+**Answer:**
+```
+True: 3 3 3
+```
+
+**Reason:**
+- `a = b = c` is chained assignment (right-to-left)
+- `c` is 3
+- `b = c` → `b = 3`
+- `a = b` → `a = 3`
+- Expression returns 3 (truthy)
+- All variables are now 3
+
+**Lesson:** Don't use assignment in conditions! Always use comparison (`===`).
+
+---
+
+## Q26: What's the output?
+```javascript
+let x = 10;
+
+if (x > 5)
+if (x > 15)
+    console.log("Greater than 15");
+else
+    console.log("Between 5 and 15");
+```
+
+**Answer:** `"Between 5 and 15"`
+
+**Reason:**  
+The `else` belongs to the nearest `if`. JavaScript sees:
+```javascript
+if (x > 5) {
+    if (x > 15) {
+        console.log("Greater than 15");
+    } else {
+        console.log("Between 5 and 15");  // This executes
+    }
+}
+```
+
+**Always use brackets to avoid confusion!**
+
+---
+
+## Q27: What's the output?
+```javascript
+switch ("hello") {
+    case "hello":
+        console.log("Hi");
+    case "world":
+        console.log("World");
+    default:
+        console.log("Default");
+}
+```
+
+**Answer:**
+```
+Hi
+World
+Default
+```
+
+**Reason:**  
+No `break` statements, so all cases fall through after the match.
+
+---
+
+## Q28: What's the output?
+```javascript
+let obj = {};
+
+if (obj) {
+    console.log("Truthy");
+}
+
+if (obj.property) {
+    console.log("Has property");
+}
+```
+
+**Answer:** `"Truthy"`
+
+**Reason:**
+- Empty objects `{}` are truthy → prints "Truthy"
+- `obj.property` is `undefined` (falsy) → doesn't print "Has property"
+
+---
+
+## Q29: What's the output?
+```javascript
+let value = false;
+
+if (!value) {
+    console.log("A");
+} else if (value) {
+    console.log("B");
+} else {
+    console.log("C");
+}
+```
+
+**Answer:** `"A"`
+
+**Reason:**
+- `!value` = `!false` = `true`
+- First condition is true
+- Prints "A" and exits
+
+---
+
+## Q30: Performance Question
+
+**Which is faster: if/else or switch?**
+
+**Answer:**  
+For **many cases (10+)**, switch is typically faster because:
+- Modern JavaScript engines optimize switch with jump tables
+- O(1) lookup for switch vs O(n) for if/else chain
+
+For **few cases (2-5)**, performance is similar. Choose based on readability:
+- Ranges → if/else
+- Specific values → switch
+
+**Example where switch is better:**
+```javascript
+// switch: O(1) lookup
+switch (statusCode) {
+    case 200: return "OK";
+    case 201: return "Created";
+    case 400: return "Bad Request";
+    case 401: return "Unauthorized";
+    // ... 50 more cases
+}
+
+// if/else: O(n) - checks each condition
+if (statusCode === 200) return "OK";
+else if (statusCode === 201) return "Created";
+else if (statusCode === 400) return "Bad Request";
+// ... much slower for last cases
+```
