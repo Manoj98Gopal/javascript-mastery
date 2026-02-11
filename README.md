@@ -13,7 +13,7 @@ Complete JavaScript notes from basics to advanced for interview preparation.
 - [05. Type Coercion & Truthy & Falsy Values](./01-basics/05-type-coercion-truthy-falsy/index.md)
 - [06. Operators](./01-basics/06-operators/index.md)
 - [07. Control Flow (if/else, switch)](./01-basics/07-control-flow/index.md)
-- [09. Loops (for, while, do-while)](./01-basics/09-loops/)
+- [09. Loops (for, while, do-while)](./01-basics/09-loops/index.md)
 - [10. Break & Continue](./01-basics/10-break-continue/)
 - [11. Functions (Basics)](./01-basics/11-functions-basics/)
 - [12. Function Declaration vs Expression](./01-basics/12-function-types/)
