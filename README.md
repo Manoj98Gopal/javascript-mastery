@@ -2,8 +2,6 @@
 
 Complete JavaScript notes from basics to advanced for interview preparation.
 
-## 📚 Table of Contents
-
 ### 🟢 Phase 1: JavaScript Basics
 
 - [01. What is JavaScript?](./01-basics/01-what-is-js/index.md)
@@ -15,10 +13,10 @@ Complete JavaScript notes from basics to advanced for interview preparation.
 - [07. Control Flow (if/else, switch)](./01-basics/07-control-flow/index.md)
 - [08. Loops (for, while, do-while)](./01-basics/08-loops/index.md)
 - [09. Break & Continue](./01-basics/09-break-continue/index.md)
-- [11. Functions (Basics)](./01-basics/11-functions-basics/)
-- [12. Function Declaration vs Expression](./01-basics/12-function-types/)
-- [13. Arrow Functions](./01-basics/13-arrow-functions/)
-- [14. Parameters & Arguments](./01-basics/14-parameters-arguments/)
+- [10. Functions (Basics)](./01-basics/10-functions-basics/index.md)
+- [11. Function Declaration vs Expression](./01-basics/11-function-types/index.md)
+- [12. Arrow Functions](./01-basics/12-arrow-functions/index.md)
+- [13. Parameters & Arguments](./01-basics/13-parameters-arguments/index.md)
 
 ### 🟡 Phase 2: Core JavaScript
 

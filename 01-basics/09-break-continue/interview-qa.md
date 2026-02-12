@@ -5,26 +5,29 @@
 **Answer:**
 
 **break:**
+
 - Exits the loop completely
 - No more iterations happen
 - Control goes to the statement after the loop
 
 **continue:**
+
 - Skips the current iteration
 - Moves to the next iteration
 - Loop continues until condition is false
+
 ```javascript
 // break - exits completely
 for (let i = 0; i < 5; i++) {
-    if (i === 3) break;
-    console.log(i);
+  if (i === 3) break;
+  console.log(i);
 }
 // Output: 0, 1, 2
 
 // continue - skips one iteration
 for (let i = 0; i < 5; i++) {
-    if (i === 3) continue;
-    console.log(i);
+  if (i === 3) continue;
+  console.log(i);
 }
 // Output: 0, 1, 2, 4
 ```
@@ -32,15 +35,17 @@ for (let i = 0; i < 5; i++) {
 ---
 
 ## Q2: What's the output?
+
 ```javascript
 for (let i = 0; i < 10; i++) {
-    if (i % 2 === 0) continue;
-    if (i > 5) break;
-    console.log(i);
+  if (i % 2 === 0) continue;
+  if (i > 5) break;
+  console.log(i);
 }
 ```
 
 **Answer:**
+
 ```
 1
 3
@@ -48,6 +53,7 @@ for (let i = 0; i < 10; i++) {
 ```
 
 **Reason:**
+
 - i=0: even, continue (skip)
 - i=1: odd, not > 5, prints 1
 - i=2: even, continue (skip)
@@ -63,12 +69,13 @@ for (let i = 0; i < 10; i++) {
 
 **Answer:**  
 No, `break` only exits the **innermost loop** by default.
+
 ```javascript
 for (let i = 0; i < 3; i++) {
-    for (let j = 0; j < 3; j++) {
-        if (j === 1) break;  // Only exits inner loop
-        console.log(`i=${i}, j=${j}`);
-    }
+  for (let j = 0; j < 3; j++) {
+    if (j === 1) break; // Only exits inner loop
+    console.log(`i=${i}, j=${j}`);
+  }
 }
 // Output:
 // i=0, j=0
@@ -77,12 +84,13 @@ for (let i = 0; i < 3; i++) {
 ```
 
 **To exit outer loop, use labeled break:**
+
 ```javascript
 outerLoop: for (let i = 0; i < 3; i++) {
-    for (let j = 0; j < 3; j++) {
-        if (j === 1) break outerLoop;  // Exits both loops
-        console.log(`i=${i}, j=${j}`);
-    }
+  for (let j = 0; j < 3; j++) {
+    if (j === 1) break outerLoop; // Exits both loops
+    console.log(`i=${i}, j=${j}`);
+  }
 }
 // Output: i=0, j=0
 ```
@@ -90,17 +98,19 @@ outerLoop: for (let i = 0; i < 3; i++) {
 ---
 
 ## Q4: What's the output?
+
 ```javascript
 let i = 0;
 
 while (i < 5) {
-    i++;
-    if (i === 3) continue;
-    console.log(i);
+  i++;
+  if (i === 3) continue;
+  console.log(i);
 }
 ```
 
 **Answer:**
+
 ```
 1
 2
@@ -114,13 +124,14 @@ When i=3, `continue` skips the console.log, but loop continues.
 ---
 
 ## Q5: What's wrong with this code?
+
 ```javascript
 let i = 0;
 
 while (i < 5) {
-    if (i === 3) continue;
-    console.log(i);
-    i++;
+  if (i === 3) continue;
+  console.log(i);
+  i++;
 }
 ```
 
@@ -128,13 +139,14 @@ while (i < 5) {
 **Infinite loop!** When i=3, `continue` is executed, but `i++` is never reached, so i stays 3 forever.
 
 **Fix:**
+
 ```javascript
 let i = 0;
 
 while (i < 5) {
-    i++;  // Increment BEFORE continue
-    if (i === 3) continue;
-    console.log(i);
+  i++; // Increment BEFORE continue
+  if (i === 3) continue;
+  console.log(i);
 }
 ```
 
@@ -146,41 +158,45 @@ while (i < 5) {
 Yes, but `break` in switch works **differently** than in loops.
 
 **In switch:**
+
 ```javascript
 switch (value) {
-    case 1:
-        console.log("One");
-        break;  // Prevents fall-through to next case
-    case 2:
-        console.log("Two");
-        break;
+  case 1:
+    console.log("One");
+    break; // Prevents fall-through to next case
+  case 2:
+    console.log("Two");
+    break;
 }
 ```
 
 **In loop:**
+
 ```javascript
 for (let i = 0; i < 5; i++) {
-    switch (i) {
-        case 2:
-            break;  // Only exits switch, NOT the loop
-    }
-    console.log(i);  // Still prints all values
+  switch (i) {
+    case 2:
+      break; // Only exits switch, NOT the loop
+  }
+  console.log(i); // Still prints all values
 }
 ```
 
 ---
 
 ## Q7: What's the output?
+
 ```javascript
 for (let i = 0; i < 3; i++) {
-    for (let j = 0; j < 3; j++) {
-        if (i === j) continue;
-        console.log(`${i}, ${j}`);
-    }
+  for (let j = 0; j < 3; j++) {
+    if (i === j) continue;
+    console.log(`${i}, ${j}`);
+  }
 }
 ```
 
 **Answer:**
+
 ```
 0, 1
 0, 2
@@ -199,43 +215,46 @@ Skips when i equals j (0,0), (1,1), (2,2).
 
 **Answer:**  
 Use **labeled break**.
+
 ```javascript
 outerLoop: for (let i = 0; i < 5; i++) {
-    for (let j = 0; j < 5; j++) {
-        if (i * j > 10) {
-            break outerLoop;  // Exits both loops
-        }
-        console.log(`${i} * ${j} = ${i * j}`);
+  for (let j = 0; j < 5; j++) {
+    if (i * j > 10) {
+      break outerLoop; // Exits both loops
     }
+    console.log(`${i} * ${j} = ${i * j}`);
+  }
 }
 ```
 
 **Alternative: Use a flag**
+
 ```javascript
 let shouldExit = false;
 
 for (let i = 0; i < 5 && !shouldExit; i++) {
-    for (let j = 0; j < 5; j++) {
-        if (i * j > 10) {
-            shouldExit = true;
-            break;
-        }
-        console.log(`${i} * ${j} = ${i * j}`);
+  for (let j = 0; j < 5; j++) {
+    if (i * j > 10) {
+      shouldExit = true;
+      break;
     }
+    console.log(`${i} * ${j} = ${i * j}`);
+  }
 }
 ```
 
 **Alternative: Use a function**
+
 ```javascript
 function findValue() {
-    for (let i = 0; i < 5; i++) {
-        for (let j = 0; j < 5; j++) {
-            if (i * j > 10) {
-                return;  // Exits function and all loops
-            }
-            console.log(`${i} * ${j} = ${i * j}`);
-        }
+  for (let i = 0; i < 5; i++) {
+    for (let j = 0; j < 5; j++) {
+      if (i * j > 10) {
+        return; // Exits function and all loops
+      }
+      console.log(`${i} * ${j} = ${i * j}`);
     }
+  }
 }
 ```
 
@@ -270,18 +289,20 @@ function findValue() {
 ---
 
 ## Q10: What's the output?
+
 ```javascript
 const arr = [1, 2, 3, 4, 5];
 
 for (const num of arr) {
-    if (num === 3) break;
-    console.log(num);
+  if (num === 3) break;
+  console.log(num);
 }
 
 console.log("Done");
 ```
 
 **Answer:**
+
 ```
 1
 2
@@ -294,21 +315,24 @@ Loop breaks when num=3, then "Done" is printed.
 ---
 
 ## Q11: What's the output?
+
 ```javascript
 for (let i = 0; i < 5; i++) {
-    if (i === 0) continue;
-    if (i === 3) break;
-    console.log(i);
+  if (i === 0) continue;
+  if (i === 3) break;
+  console.log(i);
 }
 ```
 
 **Answer:**
+
 ```
 1
 2
 ```
 
 **Reason:**
+
 - i=0: continue (skip)
 - i=1: prints 1
 - i=2: prints 2
@@ -319,35 +343,38 @@ for (let i = 0; i < 5; i++) {
 ## Q12: How do you find the first even number in an array?
 
 **Answer:**
+
 ```javascript
 const numbers = [1, 3, 5, 8, 9, 10];
 let firstEven = null;
 
 for (const num of numbers) {
-    if (num % 2 === 0) {
-        firstEven = num;
-        break;  // Stop at first match
-    }
+  if (num % 2 === 0) {
+    firstEven = num;
+    break; // Stop at first match
+  }
 }
 
-console.log(firstEven);  // 8
+console.log(firstEven); // 8
 ```
 
 ---
 
 ## Q13: What's the output?
+
 ```javascript
 let count = 0;
 
 while (true) {
-    count++;
-    if (count === 3) continue;
-    if (count > 5) break;
-    console.log(count);
+  count++;
+  if (count === 3) continue;
+  if (count > 5) break;
+  console.log(count);
 }
 ```
 
 **Answer:**
+
 ```
 1
 2
@@ -356,6 +383,7 @@ while (true) {
 ```
 
 **Reason:**
+
 - count=1: prints 1
 - count=2: prints 2
 - count=3: continue (skip)
@@ -368,12 +396,13 @@ while (true) {
 ## Q14: How do you skip null or undefined values in an array?
 
 **Answer:**
+
 ```javascript
 const data = [1, null, 2, undefined, 3, null, 4];
 
 for (const value of data) {
-    if (value == null) continue;  // Skips null and undefined
-    console.log(value);
+  if (value == null) continue; // Skips null and undefined
+  console.log(value);
 }
 // Output: 1, 2, 3, 4
 ```
@@ -381,20 +410,22 @@ for (const value of data) {
 ---
 
 ## Q15: What's the output?
+
 ```javascript
 for (let i = 0; i < 3; i++) {
-    console.log("Start:", i);
-    
-    if (i === 1) {
-        console.log("Skipping");
-        continue;
-    }
-    
-    console.log("End:", i);
+  console.log("Start:", i);
+
+  if (i === 1) {
+    console.log("Skipping");
+    continue;
+  }
+
+  console.log("End:", i);
 }
 ```
 
 **Answer:**
+
 ```
 Start: 0
 End: 0
@@ -413,12 +444,13 @@ When i=1, continue skips "End: 1" but loop continues.
 
 **Answer:**  
 Yes, break works with all loop types.
+
 ```javascript
 const fruits = ["apple", "banana", "mango", "orange"];
 
 for (const fruit of fruits) {
-    if (fruit === "mango") break;
-    console.log(fruit);
+  if (fruit === "mango") break;
+  console.log(fruit);
 }
 // Output: apple, banana
 ```
@@ -426,24 +458,26 @@ for (const fruit of fruits) {
 ---
 
 ## Q17: What's the output?
+
 ```javascript
 const matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
 ];
 
 search: for (let i = 0; i < matrix.length; i++) {
-    for (let j = 0; j < matrix[i].length; j++) {
-        if (matrix[i][j] === 5) {
-            console.log(`Found at [${i}][${j}]`);
-            break search;
-        }
+  for (let j = 0; j < matrix[i].length; j++) {
+    if (matrix[i][j] === 5) {
+      console.log(`Found at [${i}][${j}]`);
+      break search;
     }
+  }
 }
 ```
 
 **Answer:**
+
 ```
 Found at [1][1]
 ```
@@ -454,10 +488,11 @@ Labeled break exits both loops when 5 is found.
 ---
 
 ## Q18: What happens here?
+
 ```javascript
 for (let i = 0; i < 5; i++) {
-    continue;
-    console.log(i);
+  continue;
+  console.log(i);
 }
 ```
 
@@ -471,36 +506,39 @@ Nothing is printed. `continue` is executed every iteration, so console.log is ne
 ## Q19: How do you remove even numbers from an array?
 
 **Answer:**
+
 ```javascript
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // Loop backwards to avoid index issues
 for (let i = numbers.length - 1; i >= 0; i--) {
-    if (numbers[i] % 2 === 0) {
-        numbers.splice(i, 1);
-    }
+  if (numbers[i] % 2 === 0) {
+    numbers.splice(i, 1);
+  }
 }
 
-console.log(numbers);  // [1, 3, 5, 7, 9]
+console.log(numbers); // [1, 3, 5, 7, 9]
 
 // Alternative: Using filter (better)
-const filtered = numbers.filter(num => num % 2 !== 0);
+const filtered = numbers.filter((num) => num % 2 !== 0);
 ```
 
 ---
 
 ## Q20: What's the output?
+
 ```javascript
 let i = 0;
 
 do {
-    i++;
-    if (i === 3) continue;
-    console.log(i);
+  i++;
+  if (i === 3) continue;
+  console.log(i);
 } while (i < 5);
 ```
 
 **Answer:**
+
 ```
 1
 2
@@ -517,6 +555,7 @@ do...while executes at least once. When i=3, continue skips console.log.
 
 **Answer:**  
 No! `break` and `continue` don't work in `forEach`.
+
 ```javascript
 // ❌ This will cause SyntaxError
 [1, 2, 3, 4, 5].forEach(num => {
@@ -534,14 +573,16 @@ for (const num of [1, 2, 3, 4, 5]) {
 ---
 
 ## Q22: What's the output?
+
 ```javascript
 for (let i = 1; i <= 5; i++) {
-    if (i % 2) continue;
-    console.log(i);
+  if (i % 2) continue;
+  console.log(i);
 }
 ```
 
 **Answer:**
+
 ```
 2
 4
@@ -552,3 +593,227 @@ for (let i = 1; i <= 5; i++) {
 
 ---
 
+## Q23: How do you validate all fields before processing?
+
+**Answer:**
+
+```javascript
+const fields = [
+  { name: "email", value: "test@example.com" },
+  { name: "password", value: "" },
+  { name: "username", value: "john" }
+];
+
+let isValid = true;
+
+for (const field of fields) {
+  if (!field.value) {
+    console.log(`Error: ${field.name} is required`);
+    isValid = false;
+    break; // Stop checking at first error
+  }
+}
+
+if (isValid) {
+  console.log("All fields valid!");
+}
+```
+
+---
+
+## Q24: What's the output?
+
+```javascript
+for (let i = 0; i < 3; i++) {
+  if (i === 1) {
+    i++;
+    continue;
+  }
+  console.log(i);
+}
+```
+
+**Answer:**
+
+```
+0
+```
+
+**Reason:**
+
+- i=0: prints 0
+- i=1: i becomes 2, continue
+- i=2: loop increments to 3 (i++)
+- i=3: condition false, exit
+
+---
+
+## Q25: When should you use break vs return in a loop inside a function?
+
+**Answer:**
+
+**break:**
+
+- Exits the loop only
+- Function continues after loop
+
+**return:**
+
+- Exits the entire function
+- Loop and function both stop
+
+```javascript
+function findValue(arr, target) {
+  for (const item of arr) {
+    if (item === target) {
+      return item; // Exits function immediately
+    }
+  }
+  return null; // Only reached if not found
+}
+
+function processArray(arr) {
+  for (const item of arr) {
+    if (item === null) {
+      break; // Exits loop, continues function
+    }
+    console.log(item);
+  }
+  console.log("Processing complete"); // This still runs
+}
+```
+
+---
+
+## Q26: What's the output?
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+let sum = 0;
+
+for (const num of numbers) {
+  if (num > 3) break;
+  sum += num;
+}
+
+console.log(sum);
+```
+
+**Answer:** `6`
+
+**Reason:**  
+Adds 1 + 2 + 3 = 6, then breaks when num=4.
+
+---
+
+## Q27: What's wrong with this code?
+
+```javascript
+for (let i = 0; i < 10; i++) {
+  if (i === 5) {
+    break;
+    console.log("This is after break");
+  }
+  console.log(i);
+}
+```
+
+**Answer:**  
+Nothing wrong (no error), but `console.log("This is after break")` is **unreachable code** and will never execute.
+
+Modern JavaScript engines and linters will warn about this.
+
+---
+
+## Q28: How do you search for a value in a 2D array?
+
+**Answer:**
+
+```javascript
+const matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+];
+
+const target = 5;
+let found = false;
+
+search: for (let i = 0; i < matrix.length; i++) {
+  for (let j = 0; j < matrix[i].length; j++) {
+    if (matrix[i][j] === target) {
+      console.log(`Found ${target} at position [${i}][${j}]`);
+      found = true;
+      break search; // Exit both loops
+    }
+  }
+}
+
+if (!found) {
+  console.log("Not found");
+}
+```
+
+---
+
+## Q29: What's the output?
+
+```javascript
+for (let i = 0; i < 5; i++) {
+  for (let j = 0; j < 5; j++) {
+    if (i + j > 4) break;
+    console.log(`${i} + ${j} = ${i + j}`);
+  }
+}
+```
+
+**Answer:**
+
+```
+0 + 0 = 0
+0 + 1 = 1
+0 + 2 = 2
+0 + 3 = 3
+0 + 4 = 4
+1 + 0 = 1
+1 + 1 = 2
+1 + 2 = 3
+1 + 3 = 4
+2 + 0 = 2
+2 + 1 = 3
+2 + 2 = 4
+3 + 0 = 3
+3 + 1 = 4
+4 + 0 = 4
+```
+
+**Reason:**  
+Inner loop breaks when sum > 4, but outer loop continues.
+
+---
+
+## Q30: Final Challenge - What's the output?
+
+```javascript
+let result = "";
+
+outer: for (let i = 0; i < 3; i++) {
+  inner: for (let j = 0; j < 3; j++) {
+    if (i === 1 && j === 1) {
+      continue outer;
+    }
+    result += `(${i},${j}) `;
+  }
+}
+
+console.log(result.trim());
+```
+
+**Answer:**
+
+```
+(0,0) (0,1) (0,2) (1,0) (2,0) (2,1) (2,2)
+```
+
+**Reason:**  
+When i=1 and j=1, `continue outer` skips to next outer iteration, so (1,1) and (1,2) are never printed.
