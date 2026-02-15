@@ -16,7 +16,6 @@ Complete JavaScript notes from basics to advanced for interview preparation.
 - [10. Functions (Basics)](./01-basics/10-functions-basics/index.md)
 - [11. Function Declaration vs Expression](./01-basics/11-function-types/index.md)
 - [12. Arrow Functions](./01-basics/12-arrow-functions/index.md)
-- [13. Parameters & Arguments](./01-basics/13-parameters-arguments/index.md)
 
 ### 🟡 Phase 2: Core JavaScript
 
