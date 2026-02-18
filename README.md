@@ -19,8 +19,7 @@ Complete JavaScript notes from basics to advanced for interview preparation.
 
 ### 🟡 Phase 2: Core JavaScript
 
-- [17. Execution Context](./02-core/17-execution-context/)
-- [18. Call Stack](./02-core/18-call-stack/)
+- [13. Execution Context & Call Stack](./02-core/13-execution-context-and-call-stack/index.md)
 - [19. Scope (Global, Function, Block)](./02-core/19-scope/)
 - [20. Lexical Environment & Scope Chain](./02-core/20-scope-chain/)
 - [21. Hoisting](./02-core/21-hoisting/)
