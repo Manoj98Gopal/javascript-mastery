@@ -20,7 +20,7 @@ Complete JavaScript notes from basics to advanced for interview preparation.
 ### 🟡 Phase 2: Core JavaScript
 
 - [13. Execution Context & Call Stack](./02-core/13-execution-context-and-call-stack/index.md)
-- [19. Scope (Global, Function, Block)](./02-core/19-scope/)
+- [14. Scope (Global, Function, Block)](./02-core/14-scope/index.md)
 - [20. Lexical Environment & Scope Chain](./02-core/20-scope-chain/)
 - [21. Hoisting](./02-core/21-hoisting/)
 - [22. Temporal Dead Zone (TDZ)](./02-core/22-tdz/)
