@@ -23,13 +23,13 @@ Complete JavaScript notes from basics to advanced for interview preparation.
 - [14. Scope (Global, Function, Block)](./02-core/14-scope/index.md)
 - [15. Lexical Environment & Scope Chain](./02-core/15-scope-chain/index.md)
 - [16. Hoisting and Temporal Dead Zone (TDZ)](./02-core/16-hoisting-and-TDZ/index.md)
-- [23. Closures](./02-core/23-closures/)
+- [17. Closures](./02-core/17-closures/index.md)
 - [24. this Keyword](./02-core/24-this-keyword/)
 - [25. call, apply, bind](./02-core/25-call-apply-bind/)
 - [26. Pass by Value vs Reference](./02-core/26-pass-by-value-reference/)
 - [27. undefined vs null vs not defined](./02-core/27-undefined-null/)
 
-### 🟠 Phase 3: Objects & Prototypes
+### 🟠 Phase 3: Objects & Prototypess
 
 - [28. Objects Deep Dive](./03-objects/28-objects-deep-dive/)
 - [29. Object Methods (keys, values, entries, assign)](./03-objects/29-object-methods/)
