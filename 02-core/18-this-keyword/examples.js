@@ -248,7 +248,7 @@ nestedObj.method();
 
 /*
 Arrow function inside method:
-✅ Inherits 'this' from method
+ Inherits 'this' from method
 - Useful for preserving context
 */
 
@@ -271,7 +271,7 @@ const counter = {
 // counter.start()
 /*
 Arrow function in callback:
-✅ Perfect use case
+ Perfect use case
 - Preserves 'this' from outer scope
 - Avoids lost context problem
 */
@@ -396,7 +396,7 @@ tempCount(); //3
 
 /*
 Arrow function as class property:
-✅ 'this' permanently bound to instance
+ 'this' permanently bound to instance
 - Useful for callbacks and event handlers
 - Can safely extract method
 */
@@ -534,7 +534,7 @@ class Timer {
   }
 
   start() {
-    // ✅ Arrow function preserves 'this'
+    //  Arrow function preserves 'this'
     setInterval(() => {
       this.seconds++;
       console.log(`Timer: ${this.seconds} seconds`);
