@@ -24,10 +24,10 @@ Complete JavaScript notes from basics to advanced for interview preparation.
 - [15. Lexical Environment & Scope Chain](./02-core/15-scope-chain/index.md)
 - [16. Hoisting and Temporal Dead Zone (TDZ)](./02-core/16-hoisting-and-TDZ/index.md)
 - [17. Closures](./02-core/17-closures/index.md)
-- [18. this Keyword](./02-core/18-this-keyword/)
-- [19. call, apply, bind](./02-core/19-call-apply-bind/)
-- [20. Pass by Value vs Reference](./02-core/20-pass-by-value-reference/)
-- [21. undefined vs null vs not defined](./02-core/21-undefined-null/)
+- [18. this Keyword](./02-core/18-this-keyword/index.md)
+- [19. call, apply, bind](./02-core/19-call-apply-bind/index.md)
+- [20. Pass by Value vs Reference and undefined vs null vs not defined](./02-core/20-pass-by-value-reference-and-null-undefined-not_defined/index.md)
+
 
 ### 🟠 Phase 3: Objects & Prototypess
 
