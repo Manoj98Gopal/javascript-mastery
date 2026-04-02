@@ -31,8 +31,8 @@ Complete JavaScript notes from basics to advanced for interview preparation.
 
 ### 🟠 Phase 3: Objects & Prototypess
 
-- [21. Objects Deep Dive](./03-objects/21-objects-deep-dive/)
-- [29. Object Methods (keys, values, entries, assign)](./03-objects/29-object-methods/)
+- [21. Objects Deep Dive](./03-objects/21-objects-deep-dive/index.md)
+- [22. Object Methods (keys, values, entries, assign)](./03-objects/22-object-methods/index.md)
 - [30. Object Property Access](./03-objects/30-property-access/)
 - [31. Shallow vs Deep Copy](./03-objects/31-shallow-deep-copy/)
 - [32. Object.freeze & Object.seal](./03-objects/32-freeze-seal/)

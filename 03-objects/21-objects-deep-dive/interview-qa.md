@@ -1,6 +1,3 @@
-# 🎯 Topic 28: Objects Deep Dive — Interview Q&A
-
----
 
 ## 📌 Section 1: Conceptual Questions
 

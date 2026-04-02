@@ -1,6 +1,3 @@
-# 📘 Topic 28: Objects Deep Dive — Theory Notes
-
----
 
 ## 1. What is an Object?
 
