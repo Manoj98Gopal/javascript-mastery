@@ -18,6 +18,28 @@
         align-items: center;
       }
 
+      .frame1 {
+        width: 9.6cm;
+        height: 16cm;
+        border: 4px solid black;
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .frame2 {
+        width: 20.28cm;
+        height: 27.04cm;
+        border: 4px solid black;
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
       .layout {
         display: flex;
         flex-direction: row;
@@ -30,19 +52,19 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center;
+        object-position: bottom;
       }
 
       .image-container {
         width: 100%;
+
       }
 
-       .image-container1 {
+      .image-container1 {
         width: 100%;
-        aspect-ratio: 6/8;
       }
 
-       .image-container2 {
+      .image-container2 {
         width: 100%;
         aspect-ratio: 6/10;
       }
@@ -50,7 +72,19 @@
   </head>
   <body>
     <div class="layout">
-      <div class="frame">
+      <div class="frame1">
+        <div class="image-container">
+          <img alt="image" src="./public/potrate1.jpg" class="image" />
+        </div>
+      </div>
+
+      <div class="frame2">
+         <div class="image-container1">
+          <img alt="image" src="./public/potrate1.jpg" class="image" />
+        </div>
+      </div>
+
+      <!-- <div class="frame">
         <div class="image-container">
           <img alt="image" src="./public/image6.jpeg" class="image" />
         </div>
@@ -66,7 +100,7 @@
         <div class="image-container2">
           <img alt="image" src="./public/image6.jpeg" class="image" />
         </div>
-      </div>
+      </div> -->
     </div>
   </body>
 </html>
