@@ -2,6 +2,8 @@
 
 Complete JavaScript notes from basics to advanced for interview preparation.
 
+- [Problems](./problems)
+
 ### 🟢 Phase 1: JavaScript Basics
 
 - [01. What is JavaScript?](./01-basics/01-what-is-js/index.md)
@@ -27,7 +29,6 @@ Complete JavaScript notes from basics to advanced for interview preparation.
 - [18. this Keyword](./02-core/18-this-keyword/index.md)
 - [19. call, apply, bind](./02-core/19-call-apply-bind/index.md)
 - [20. Pass by Value vs Reference and undefined vs null vs not defined](./02-core/20-pass-by-value-reference-and-null-undefined-not_defined/index.md)
-
 
 ### 🟠 Phase 3: Objects & Prototypess
 
