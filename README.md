@@ -2,7 +2,7 @@
 
 Complete JavaScript notes from basics to advanced for interview preparation.
 
-- [Problems](./problems)
+- [Problems](./level_up/index.md)
 
 ### 🟢 Phase 1: JavaScript Basics
 
