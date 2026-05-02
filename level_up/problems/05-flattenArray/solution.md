@@ -1,4 +1,4 @@
-# Day 3 — FlattenArray
+# FlattenArray
 
 [⬅ Back to problem list](../../index.md)
 
