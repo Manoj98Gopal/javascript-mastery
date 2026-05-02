@@ -1,5 +1,8 @@
 # chunkArray
 
+[⬅ Back to problem list](../../index.md)
+
+
 ## Problem Statement
 
 Write a function `chunkArray(arr, size)` that splits an array into groups of the given `size`. The last chunk may be smaller if elements don't divide evenly.

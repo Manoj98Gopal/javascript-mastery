@@ -1,5 +1,8 @@
 # Day 3 — FlattenArray
 
+[⬅ Back to problem list](../../index.md)
+
+
 ## Problem Statement
 
 Write a function `flattenArray(arr)` that takes a **nested array** and returns a single flat array with all values.

@@ -12,3 +12,5 @@ Daily coding practice.
 - [04. Chunk Arrays](./problems/04-chunk-array/solution.md)
 - [05. Flatten Array](./problems/05-flattenArray/solution.md)
 - [06. Count Vowels](./problems/06-countVowels/solution.md)
+- [07. Count Vowels](./problems/07-groups-an-array-of-objects/solution.md)
+- [08. Count Vowels](./problems/08-title-case/solution.md)

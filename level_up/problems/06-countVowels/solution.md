@@ -1,5 +1,8 @@
 # Day 3 — CountVowels
 
+[⬅ Back to problem list](../../index.md)
+
+
 ## Problem Statement
 
 Write a function `countVowels(str)` that returns the number of vowels in a string.

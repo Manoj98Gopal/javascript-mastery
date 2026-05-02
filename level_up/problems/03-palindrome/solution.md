@@ -1,5 +1,8 @@
 # isPalindrome
 
+[⬅ Back to problem list](../../index.md)
+
+
 ## Problem Statement
 
 Write a function `isPalindrome(str)` that returns `true` if the given string is a palindrome, and `false` otherwise.
