@@ -16,3 +16,6 @@ Daily coding practice.
 - [08. Title Case](./problems/08-title-case/solution.md)
 - [09. Invert Object](./problems/09-invert-object/solution.md)
 - [10. Max consecutive ones](./problems/10-max-consecutive-ones/solution.md)
+- [11. Remove duplicates](./problems/11-remove-duplicates/solution.md)
+- [12. Sum digits (recursion)](./problems/12-sum-digits/solution.md)
+
