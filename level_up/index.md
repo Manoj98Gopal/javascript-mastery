@@ -18,4 +18,5 @@ Daily coding practice.
 - [10. Max consecutive ones](./problems/10-max-consecutive-ones/solution.md)
 - [11. Remove duplicates](./problems/11-remove-duplicates/solution.md)
 - [12. Sum digits (recursion)](./problems/12-sum-digits/solution.md)
-
+- [13. Two Sums using array](./problems/13-two-sums/solution.md)
+- [14. Max sum sub Array](./problems/14-max-sum-sub-array/solution.md)
