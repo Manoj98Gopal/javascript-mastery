@@ -22,4 +22,7 @@ Daily coding practice.
 - [14. Max sum sub Array](./problems/14-max-sum-sub-array/solution.md)
 - [15. String is Anagram](./problems/15-anagram/solution.md)
 - [16. Pair sum](./problems/16-pairsum/solution.md)
+- [17. Largest word](./problems/17-largest-word/solution.md)
+- [18. Rotate array](./problems/18-rotate-array/solution.md)
+
 
