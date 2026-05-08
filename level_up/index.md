@@ -24,5 +24,5 @@ Daily coding practice.
 - [16. Pair sum](./problems/16-pairsum/solution.md)
 - [17. Largest word](./problems/17-largest-word/solution.md)
 - [18. Rotate array](./problems/18-rotate-array/solution.md)
-
-
+- [19. Make counter using closure](./problems/19-counter-using-closure/solution.md)
+- [20. Rotate array](./problems/20-sort-by-grequency/solution.md)
