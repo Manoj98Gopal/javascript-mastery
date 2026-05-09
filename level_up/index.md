@@ -26,3 +26,6 @@ Daily coding practice.
 - [18. Rotate array](./problems/18-rotate-array/solution.md)
 - [19. Make counter using closure](./problems/19-counter-using-closure/solution.md)
 - [20. Rotate array](./problems/20-sort-by-grequency/solution.md)
+- [21. Memoize](./problems/21-memoize/solution.md)
+- [22. zip Array](./problems/22-zipArray/solution.md)
+
