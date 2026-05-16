@@ -28,7 +28,10 @@ Daily coding practice.
 - [20. Rotate array](./problems/20-sort-by-grequency/solution.md)
 - [21. Memoize](./problems/21-memoize/solution.md)
 - [22. zip Array](./problems/22-zipArray/solution.md)
-- [23. zip Array](./problems/23-fechsequentially/solution.md)
-- [24. zip Array](./problems/24-missingNumber/solution.md)
+- [23. Fetch Api sequentially](./problems/23-fechsequentially/solution.md)
+- [24. Missing Number](./problems/24-missingNumber/solution.md)
+- [25. Compress String](./problems/25-compressString/solution.md)
+- [26. Intersect arrays](./problems/26-intersectArrays/solution.md)
+
 
 
